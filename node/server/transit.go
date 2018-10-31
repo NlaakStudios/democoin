@@ -3,8 +3,8 @@ package server
 import (
 	"errors"
 
-	"github.com/gelembjuk/democoin/lib/net"
-	"github.com/gelembjuk/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib/net"
+	"github.com/NlaakStudios/democoin/lib/utils"
 )
 
 type nodeTransit struct {

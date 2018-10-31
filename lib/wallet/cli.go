@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gelembjuk/democoin/lib/net"
-	"github.com/gelembjuk/democoin/lib/nodeclient"
-	"github.com/gelembjuk/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib/net"
+	"github.com/NlaakStudios/democoin/lib/nodeclient"
+	"github.com/NlaakStudios/democoin/lib/utils"
 )
 
 const walletFile = "wallet.dat"

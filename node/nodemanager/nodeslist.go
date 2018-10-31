@@ -1,7 +1,7 @@
 package nodemanager
 
 import (
-	"github.com/gelembjuk/democoin/lib/net"
+	"github.com/NlaakStudios/democoin/lib/net"
 )
 
 type NodesListStorage struct {

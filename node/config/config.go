@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/gelembjuk/democoin/lib/net"
-	"github.com/gelembjuk/democoin/node/database"
+	"github.com/NlaakStudios/democoin/lib/net"
+	"github.com/NlaakStudios/democoin/node/database"
 )
 
 // Thi is the struct with all possible command line arguments

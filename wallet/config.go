@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/gelembjuk/democoin/lib/wallet"
+	"github.com/NlaakStudios/democoin/lib/wallet"
 )
 
 func GetAppInput() (wallet.AppInput, error) {

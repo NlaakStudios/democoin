@@ -6,13 +6,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/gelembjuk/democoin/lib/net"
-	"github.com/gelembjuk/democoin/lib/nodeclient"
-	"github.com/gelembjuk/democoin/lib/utils"
-	"github.com/gelembjuk/democoin/node/blockchain"
-	"github.com/gelembjuk/democoin/node/nodemanager"
-	"github.com/gelembjuk/democoin/node/structures"
-	"github.com/gelembjuk/democoin/node/transactions"
+	"github.com/NlaakStudios/democoin/lib/net"
+	"github.com/NlaakStudios/democoin/lib/nodeclient"
+	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/node/blockchain"
+	"github.com/NlaakStudios/democoin/node/nodemanager"
+	"github.com/NlaakStudios/democoin/node/structures"
+	"github.com/NlaakStudios/democoin/node/transactions"
 )
 
 type NodeServerRequest struct {

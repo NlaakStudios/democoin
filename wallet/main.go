@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gelembjuk/democoin/lib"
-	"github.com/gelembjuk/democoin/lib/utils"
-	"github.com/gelembjuk/democoin/lib/wallet"
+	"github.com/NlaakStudios/democoin/lib"
+	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib/wallet"
 )
 
 func main() {

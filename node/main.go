@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gelembjuk/democoin/lib"
-	"github.com/gelembjuk/democoin/node/config"
+	"github.com/NlaakStudios/democoin/lib"
+	"github.com/NlaakStudios/democoin/node/config"
 )
 
 func main() {

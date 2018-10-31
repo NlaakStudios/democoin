@@ -8,7 +8,7 @@ This was created with education purposes. It can be used for learning of how cry
 
 The application has only command line interface. It has **no a GUI** yet. This project contains two apps - Node and Wallet
 
-Web site of the project http://democoin.gelembjuk.com/
+Web site of the project http://democoin.NlaakStudios.com/
 
 ### Node 
 
@@ -115,13 +115,13 @@ go get github.com/btcsuite/btcutil
 Now get the code of DemoCoin
 
 ```
-go get github.com/gelembjuk/democoin
+go get github.com/NlaakStudios/democoin
 ```
 
 Go to sources. On Ubuntu this looks like
 
 ```
-cd $GOPATH/src/github.com/gelembjuk/democoin/
+cd $GOPATH/src/github.com/NlaakStudios/democoin/
 ```
 
 Finally, build the node and the wallet 
@@ -263,6 +263,6 @@ Balance for all addresses:
 
 ## Author
 
-Roman Gelembjuk , roman@gelembjuk.com 
+Roman Gelembjuk , roman@NlaakStudios.com 
 
-http://democoin.gelembjuk.com/
+http://democoin.NlaakStudios.com/

@@ -6,9 +6,9 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/gelembjuk/democoin/lib/utils"
-	"github.com/gelembjuk/democoin/node/config"
-	"github.com/gelembjuk/democoin/node/structures"
+	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/node/config"
+	"github.com/NlaakStudios/democoin/node/structures"
 )
 
 var (

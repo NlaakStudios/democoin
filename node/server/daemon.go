@@ -12,11 +12,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/gelembjuk/democoin/lib/net"
-	"github.com/gelembjuk/democoin/lib/utils"
-	"github.com/gelembjuk/democoin/lib/wallet"
-	"github.com/gelembjuk/democoin/node/config"
-	"github.com/gelembjuk/democoin/node/nodemanager"
+	"github.com/NlaakStudios/democoin/lib/net"
+	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib/wallet"
+	"github.com/NlaakStudios/democoin/node/config"
+	"github.com/NlaakStudios/democoin/node/nodemanager"
 )
 
 type NodeDaemon struct {

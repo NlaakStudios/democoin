@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 )
-import "github.com/gelembjuk/democoin/lib/utils"
+import "github.com/NlaakStudios/democoin/lib/utils"
 
 // TXInput represents a transaction input
 type TXInput struct {

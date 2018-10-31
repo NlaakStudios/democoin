@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gelembjuk/democoin/lib"
-	"github.com/gelembjuk/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib"
+	"github.com/NlaakStudios/democoin/lib/utils"
 )
 
 // INterface for extra storage for a nodes.

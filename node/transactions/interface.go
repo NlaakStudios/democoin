@@ -3,8 +3,8 @@ package transactions
 import (
 	"crypto/ecdsa"
 
-	"github.com/gelembjuk/democoin/lib/wallet"
-	"github.com/gelembjuk/democoin/node/structures"
+	"github.com/NlaakStudios/democoin/lib/wallet"
+	"github.com/NlaakStudios/democoin/node/structures"
 )
 
 type UnApprovedTransactionCallbackInterface func(txhash, txstr string) error

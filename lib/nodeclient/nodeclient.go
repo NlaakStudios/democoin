@@ -15,8 +15,8 @@ import (
 	"io/ioutil"
 	"net"
 
-	netlib "github.com/gelembjuk/democoin/lib/net"
-	"github.com/gelembjuk/democoin/lib/utils"
+	netlib "github.com/NlaakStudios/democoin/lib/net"
+	"github.com/NlaakStudios/democoin/lib/utils"
 )
 
 type NodeClient struct {

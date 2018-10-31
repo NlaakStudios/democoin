@@ -3,8 +3,8 @@ package nodemanager
 import (
 	"sync"
 
-	"github.com/gelembjuk/democoin/lib/utils"
-	"github.com/gelembjuk/democoin/node/database"
+	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/node/database"
 )
 
 type Database struct {

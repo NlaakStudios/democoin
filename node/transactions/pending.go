@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/gelembjuk/democoin/lib/utils"
-	"github.com/gelembjuk/democoin/node/database"
-	"github.com/gelembjuk/democoin/node/structures"
+	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/node/database"
+	"github.com/NlaakStudios/democoin/node/structures"
 )
 
 type unApprovedTransactions struct {

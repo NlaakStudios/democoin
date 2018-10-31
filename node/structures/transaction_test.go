@@ -9,7 +9,7 @@ import (
 
 	"testing"
 
-	"github.com/gelembjuk/democoin/lib/wallet"
+	"github.com/NlaakStudios/democoin/lib/wallet"
 )
 
 func TestHash(t *testing.T) {

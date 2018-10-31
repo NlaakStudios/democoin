@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/boltdb/bolt"
-	"github.com/gelembjuk/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib/utils"
 )
 
 const (

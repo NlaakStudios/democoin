@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gelembjuk/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib/utils"
 	assert "github.com/stretchr/testify/require"
 )
 

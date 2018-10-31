@@ -3,7 +3,7 @@ package server
 import (
 	"testing"
 
-	"github.com/gelembjuk/democoin/lib"
+	"github.com/NlaakStudios/democoin/lib"
 )
 
 func TestAddBlockSimple(t *testing.T) {

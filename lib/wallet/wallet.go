@@ -8,8 +8,8 @@ import (
 	"encoding/gob"
 	"log"
 
-	"github.com/gelembjuk/democoin/lib"
-	"github.com/gelembjuk/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib"
+	"github.com/NlaakStudios/democoin/lib/utils"
 )
 
 const keysTestString = "this is the test string to use for new keys. to know that sign and verify works fine"

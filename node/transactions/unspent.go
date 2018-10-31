@@ -8,11 +8,11 @@ import (
 	"log"
 	"sort"
 
-	"github.com/gelembjuk/democoin/lib/utils"
-	"github.com/gelembjuk/democoin/lib/wallet"
-	"github.com/gelembjuk/democoin/node/blockchain"
-	"github.com/gelembjuk/democoin/node/database"
-	"github.com/gelembjuk/democoin/node/structures"
+	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/democoin/lib/wallet"
+	"github.com/NlaakStudios/democoin/node/blockchain"
+	"github.com/NlaakStudios/democoin/node/database"
+	"github.com/NlaakStudios/democoin/node/structures"
 )
 
 // unspentTransactions represents UTXO set
