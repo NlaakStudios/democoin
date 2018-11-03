@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/NlaakStudios/democoin/lib/utils"
+	"github.com/NlaakStudios/structures/transaction"
 )
 
 // Block represents a block in the blockchain

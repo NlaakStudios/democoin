@@ -1,4 +1,4 @@
-package structures
+package transaction
 
 // Sructures to display extra info related to tranactions
 
