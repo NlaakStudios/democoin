@@ -4,6 +4,7 @@ import (
 	"github.com/NlaakStudios/democoin/lib/utils"
 	"github.com/NlaakStudios/democoin/node/database"
 	"github.com/NlaakStudios/democoin/node/structures"
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
 )
 
 // BlockchainIterator is used to iterate over blockchain blocks
@@ -66,8 +67,8 @@ func (i *BlockchainIterator) Next() (*structures.Block, error) {
 }
 
 // Returns history of transactions for given address
-func (i *BlockchainIterator) GetAddressHistory(pubKeyHash []byte, address string) ([]structures.TransactionsHistory, error) {
-	result := []structures.TransactionsHistory{}
+func (i *BlockchainIterator) GetAddressHistory(pubKeyHash []byte, address string) ([]transaction.TransactionsHistory, error) {
+	result := []transaction.TransactionsHistory{}
 
 	for {
 		block, _ := i.Next()
@@ -106,11 +107,11 @@ func (i *BlockchainIterator) GetAddressHistory(pubKeyHash []byte, address string
 				}
 
 				if spentvalue > 0 {
-					result = append(result, structures.TransactionsHistory{false, tx.ID, destaddress, spentvalue})
+					result = append(result, transaction.TransactionsHistory{false, tx.ID, destaddress, spentvalue})
 				} else {
 					// spent to himself. this should not be usual case
-					result = append(result, structures.TransactionsHistory{false, tx.ID, address, totalvalue})
-					result = append(result, structures.TransactionsHistory{true, tx.ID, address, totalvalue})
+					result = append(result, transaction.TransactionsHistory{false, tx.ID, address, totalvalue})
+					result = append(result, transaction.TransactionsHistory{true, tx.ID, address, totalvalue})
 				}
 			} else if tx.IsCoinbase() {
 
@@ -129,7 +130,7 @@ func (i *BlockchainIterator) GetAddressHistory(pubKeyHash []byte, address string
 			}
 
 			if income > 0 {
-				result = append(result, structures.TransactionsHistory{true, tx.ID, spentaddress, income})
+				result = append(result, transaction.TransactionsHistory{true, tx.ID, spentaddress, income})
 			}
 		}
 

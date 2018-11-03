@@ -6,6 +6,8 @@ import (
 	"math/rand"
 	"time"
 
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
+
 	"github.com/NlaakStudios/democoin/lib/net"
 	"github.com/NlaakStudios/democoin/lib/nodeclient"
 	"github.com/NlaakStudios/democoin/lib/utils"
@@ -178,7 +180,7 @@ func (n *Node) InitBlockchainFromOther(host string, port int) (bool, error) {
 /*
 * Send transaction to all known nodes. This wil send only hash and node hash to check if hash exists or no
  */
-func (n *Node) SendTransactionToAll(tx *structures.Transaction) {
+func (n *Node) SendTransactionToAll(tx *transaction.Transaction) {
 	n.Logger.Trace.Printf("Send transaction to %d nodes", len(n.NodeNet.Nodes))
 
 	for _, node := range n.NodeNet.Nodes {

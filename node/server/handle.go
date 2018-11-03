@@ -6,6 +6,8 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
+
 	"github.com/NlaakStudios/democoin/lib/net"
 	"github.com/NlaakStudios/democoin/lib/nodeclient"
 	"github.com/NlaakStudios/democoin/lib/utils"
@@ -181,7 +183,7 @@ func (s *NodeServerRequest) handleTxFull() error {
 	if err != nil {
 		return err
 	}
-	TX := structures.Transaction{}
+	TX := transaction.Transaction{}
 	TX.DeserializeTransaction(payload.TX)
 
 	err = s.Node.GetTransactionsManager().ReceivedNewTransaction(&TX)
@@ -636,7 +638,7 @@ func (s *NodeServerRequest) handleTx() error {
 	}
 
 	txData := payload.Transaction
-	tx := structures.Transaction{}
+	tx := transaction.Transaction{}
 	err = tx.DeserializeTransaction(txData)
 
 	if err != nil {

@@ -6,13 +6,13 @@ import (
 	"time"
 
 	"github.com/NlaakStudios/democoin/lib/utils"
-	"github.com/NlaakStudios/structures/transaction"
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
 )
 
 // Block represents a block in the blockchain
 type Block struct {
 	Timestamp     int64
-	Transactions  []*Transaction
+	Transactions  []*transaction.Transaction
 	PrevBlockHash []byte
 	Hash          []byte
 	Nonce         int
@@ -119,7 +119,7 @@ func (b *Block) GetSimpler() *BlockSimpler {
 func (b *Block) Copy() *Block {
 	bc := Block{}
 	bc.Timestamp = b.Timestamp
-	bc.Transactions = []*Transaction{}
+	bc.Transactions = []*transaction.Transaction{}
 
 	bc.PrevBlockHash = make([]byte, len(b.PrevBlockHash))
 
@@ -144,7 +144,7 @@ func (b *Block) Copy() *Block {
 }
 
 // Fills a block with transactions. But without signatures
-func (b *Block) PrepareNewBlock(transactions []*Transaction, prevBlockHash []byte, height int) error {
+func (b *Block) PrepareNewBlock(transactions []*transaction.Transaction, prevBlockHash []byte, height int) error {
 	b.Timestamp = time.Now().Unix()
 	b.Transactions = transactions[:]
 

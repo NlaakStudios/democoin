@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
+
 	"github.com/NlaakStudios/democoin/lib/utils"
 	"github.com/NlaakStudios/democoin/node/blockchain"
 	"github.com/NlaakStudios/democoin/node/config"
@@ -202,7 +204,7 @@ func (n *NodeBlockMaker) CompleteBlock() (*structures.Block, error) {
 
 // this builds a block object from given transactions list
 // adds coinbase transacion (prize for miner)
-func (n *NodeBlockMaker) makeNewBlockFromTransactions(transactions []*structures.Transaction) (*structures.Block, error) {
+func (n *NodeBlockMaker) makeNewBlockFromTransactions(transactions []*transaction.Transaction) (*structures.Block, error) {
 	// get last block info
 	lastHash, lastHeight, err := n.getBlockchainManager().GetState()
 
@@ -211,7 +213,7 @@ func (n *NodeBlockMaker) makeNewBlockFromTransactions(transactions []*structures
 	}
 
 	// add transaction - prize for miner
-	cbTx := &structures.Transaction{}
+	cbTx := &transaction.Transaction{}
 
 	errc := cbTx.MakeCoinbaseTX(n.MinterAddress, "")
 
@@ -284,7 +286,7 @@ func (n *NodeBlockMaker) VerifyBlock(block *structures.Block) error {
 	// 1
 	coinbaseused := false
 
-	prevTXs := []*structures.Transaction{}
+	prevTXs := []*transaction.Transaction{}
 
 	for _, tx := range block.Transactions {
 		if tx.IsCoinbase() {

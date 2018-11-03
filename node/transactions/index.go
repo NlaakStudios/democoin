@@ -5,6 +5,8 @@ import (
 	"encoding/gob"
 	"fmt"
 
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
+
 	"github.com/NlaakStudios/democoin/lib/utils"
 	"github.com/NlaakStudios/democoin/node/blockchain"
 	"github.com/NlaakStudios/democoin/node/database"
@@ -422,8 +424,8 @@ func (ti *transactionsIndex) filterTranactionOutputsSpent(outPuts []Transactions
 }
 
 // Get full TX, spending status and block hash for TX by ID
-func (ti *transactionsIndex) GetTransactionAllInfo(txID []byte, topHash []byte) (*structures.Transaction, []TransactionsIndexSpentOutputs, []byte, error) {
-	localError := func(err error) (*structures.Transaction, []TransactionsIndexSpentOutputs, []byte, error) {
+func (ti *transactionsIndex) GetTransactionAllInfo(txID []byte, topHash []byte) (*transaction.Transaction, []TransactionsIndexSpentOutputs, []byte, error) {
+	localError := func(err error) (*transaction.Transaction, []TransactionsIndexSpentOutputs, []byte, error) {
 		return nil, nil, nil, err
 	}
 

@@ -3,6 +3,8 @@ package nodemanager
 import (
 	"errors"
 
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
+
 	"github.com/NlaakStudios/democoin/lib/utils"
 	"github.com/NlaakStudios/democoin/lib/wallet"
 	"github.com/NlaakStudios/democoin/node/blockchain"
@@ -65,7 +67,7 @@ func (n *NodeBlockchain) GetTopBlockHash() ([]byte, error) {
 }
 
 // Returns history of transactions for given address
-func (n *NodeBlockchain) GetAddressHistory(address string) ([]structures.TransactionsHistory, error) {
+func (n *NodeBlockchain) GetAddressHistory(address string) ([]transaction.TransactionsHistory, error) {
 	if address == "" {
 		return nil, errors.New("Address is missed")
 	}

@@ -4,6 +4,8 @@ import (
 	"bytes"
 	"errors"
 
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
+
 	"github.com/NlaakStudios/democoin/lib/utils"
 	"github.com/NlaakStudios/democoin/node/database"
 	"github.com/NlaakStudios/democoin/node/structures"
@@ -297,7 +299,7 @@ func (bc *Blockchain) DeleteBlock() (*structures.Block, error) {
 
 // GetTransactionFromBlock finds a transaction by its ID in given block
 // If block is known . It worsk much faster then FindTransaction
-func (bc *Blockchain) GetTransactionFromBlock(txID []byte, blockHash []byte) (*structures.Transaction, error) {
+func (bc *Blockchain) GetTransactionFromBlock(txID []byte, blockHash []byte) (*transaction.Transaction, error) {
 	block, err := bc.GetBlock(blockHash)
 
 	if err != nil {

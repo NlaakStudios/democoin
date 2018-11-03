@@ -4,6 +4,8 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/NlaakStudios/democoin/node/structures/transaction"
+
 	"github.com/NlaakStudios/democoin/lib/net"
 	"github.com/NlaakStudios/democoin/lib/nodeclient"
 	"github.com/NlaakStudios/democoin/lib/utils"
@@ -156,7 +158,7 @@ func (n *makeBlockchain) prepareGenesisBlock(address, genesisCoinbaseData string
 		return nil, errors.New("Geneisis block text missed")
 	}
 
-	cbtx := &structures.Transaction{}
+	cbtx := &transaction.Transaction{}
 
 	errc := cbtx.MakeCoinbaseTX(address, genesisCoinbaseData)
 
@@ -165,7 +167,7 @@ func (n *makeBlockchain) prepareGenesisBlock(address, genesisCoinbaseData string
 	}
 
 	genesis := &structures.Block{}
-	genesis.PrepareNewBlock([]*structures.Transaction{cbtx}, []byte{}, 0)
+	genesis.PrepareNewBlock([]*transaction.Transaction{cbtx}, []byte{}, 0)
 
 	return genesis, nil
 }
