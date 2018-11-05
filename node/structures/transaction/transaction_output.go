@@ -19,7 +19,7 @@ type TXOutput struct {
 
 // Simplified output format. To use externally
 // It has all info in human readable format
-// this can be used to display info abut outputs wihout references to transaction object
+// this can be used to display info about outputs wihout references to transaction object
 type TXOutputIndependent struct {
 	Value          float64
 	DestPubKeyHash []byte
@@ -49,7 +49,7 @@ func (out *TXOutputIndependent) IsLockedWithKey(pubKeyHash []byte) bool {
 	return bytes.Compare(out.DestPubKeyHash, pubKeyHash) == 0
 }
 
-// build independed transaction from normal output
+// build independent transaction from normal output
 func (out *TXOutputIndependent) LoadFromSimple(sout TXOutput, txid []byte, ind int, sender []byte, iscoinbase bool, blockHash []byte) {
 	out.OIndex = ind
 	out.DestPubKeyHash = sout.PubKeyHash
