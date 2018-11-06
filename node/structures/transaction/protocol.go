@@ -1,4 +1,5 @@
-package structures
+package transaction
+
 
 //
 type Protocol struct {

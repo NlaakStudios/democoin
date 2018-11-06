@@ -11,7 +11,17 @@ import (
 	"github.com/NlaakStudios/democoin/lib/utils"
 )
 
-// TXOutput represents a transaction output
+// TXOutput represents a transaction output.
+// An output contains instructions for sending bitcoins. Value is the number of Satoshi
+// (1 BTC = 100,000,000 Satoshi) that this output will be worth when claimed. ScriptPubKey
+// is the second half of a script (discussed later). There can be more than one output, and
+// they share the combined value of the inputs. Because each output from one transaction can
+// only ever be referenced once by an input of a subsequent transaction, the entire combined
+// input value needs to be sent in an output if you don't want to lose it. If the input is
+// worth 50 BTC but you only want to send 25 BTC, Bitcoin will create two outputs worth 25 BTC:
+// one to the destination, and one back to you (known as "change", though you send it to yourself).
+// Any input bitcoins not redeemed in an output is considered a transaction fee; whoever generates
+// the block can claim it by inserting it into the coinbase transaction of that block.
 type TXOutput struct {
 	Value      float64
 	PubKeyHash []byte

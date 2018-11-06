@@ -23,6 +23,7 @@ type Transaction struct {
 	ID   []byte
 	Vin  []TXInput
 	Vout []TXOutput
+	//Vprotocol []Protocol
 	Time int64
 }
 
