@@ -3,7 +3,7 @@
 
 *.json
 *.txt
-
+*.exe
 *.pyc
 
 node/node
